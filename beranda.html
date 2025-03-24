@@ -24,11 +24,11 @@
     <!-- Main Content -->
     <main class="flex-grow text-center px-4 w-full max-w-5xl">
         <div class="mt-8">
-            <h1 class="text-5xl font-bold" style="font-family: 'Kablammo', cursive;">☘ Siramono ☘</h1>
+            <h1 class="text-5xl font-bold">Welcome to Siramono</h1>
         </div>
 
         <div class="mt-6">
-            <p class="text-2xl font-medium">Selamat Pagi!</p>
+            <p id="greeting" class="text-2xl font-medium"></p>
             <p class="text-lg text-gray-700">Sudahkah kamu merawat tanamanmu hari ini?</p>
         </div>
 
@@ -71,6 +71,28 @@
     </footer>
 
     <script>
+        // Fungsi untuk menentukan ucapan berdasarkan waktu WIB
+        function getGreeting() {
+            let now = new Date();
+            let hours = now.getHours();
+            let greetingText = "Halo, ";
+
+            if (hours >= 4 && hours < 12) {
+                greetingText += "Selamat Pagi!";
+            } else if (hours >= 12 && hours < 15) {
+                greetingText += "Selamat Siang!";
+            } else if (hours >= 15 && hours < 18) {
+                greetingText += "Selamat Sore!";
+            } else {
+                greetingText += "Selamat Malam!";
+            }
+
+            document.getElementById("greeting").innerText = greetingText;
+        }
+
+        // Panggil fungsi ucapan saat halaman dimuat
+        getGreeting();
+
         // Mengambil data dari API PHP
         fetch('data.php')
             .then(response => response.json())
