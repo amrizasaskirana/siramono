@@ -19,6 +19,10 @@ $hasil = mysqli_query($conn, $query);
             background-color: green;
             color: white;
         }
+
+        .tbody {
+            background-color: white;
+        }
     </style>
 </head>
 
@@ -31,7 +35,7 @@ $hasil = mysqli_query($conn, $query);
         </header>
     <div class="container mt-4">
         <div class="alert alert-success text-center">
-            <h2>DAFTAR TANAMAN SIRAMONO</h2>
+            <h1 style="font-weight: bold;">DAFTAR TANAMAN SIRAMONO</h1>
         </div>
         <a href="tambahtanaman.php" class="btn btn-primary mb-3">Tambah Tanaman</a>
         <a href="../beranda.html" class="btn btn-primary mb-3">Beranda</a>
@@ -45,7 +49,7 @@ $hasil = mysqli_query($conn, $query);
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="tbody">
                 <?php while ($data = mysqli_fetch_array($hasil)) : ?>
                     <tr>
                         <td><?= $data['id_tanaman']; ?></td>
