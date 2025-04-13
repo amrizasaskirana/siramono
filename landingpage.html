@@ -5,31 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Siramono - Smart Farming</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
-      background: #f4f4f4;
+      background: #eafaea;
+      scroll-behavior: smooth;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+    header {
+      background: #27ae60;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      color: #2C3E50;
-    }
-
-    p {
-      color: #555;
+    header h1 {
+      margin: 0;
     }
 
     .btn {
@@ -38,26 +36,113 @@
       margin: 10px;
       text-decoration: none;
       color: white;
-      background: #27ae60;
+      background: #2ecc71;
       border-radius: 5px;
+      font-weight: bold;
     }
 
     .btn:hover {
-      background: #219150;
+      background: #27ae60;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background-color: #d4fcd3;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 220px;
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #27ae60;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="w-1/2 text-center p-4">
-      <h1 class="text-3xl font-bold text-green-700 mb-2">Welcome to Siramono!</h1>
-      <p class="text-gray-600">Kelola tanaman Anda dengan mudah dan efisien bersama Siramono.
-        Pantau pertumbuhan, atur jadwal penyiraman, dan nikmati keindahan hijau di rumah Anda.</p>
+  <header>
+    <h1>Siramono</h1>
+    <div>
+      <a href="login.html" class="btn">Login</a>
+      <a href="register.html" class="btn">Register</a>
     </div>
-    <a href="login.html" class="btn">Login</a>
-    <a href="register.html" class="btn">Register</a>
-  </div>
+  </header>
+
+  <section class="section hero">
+    <div class="container">
+      <h2>Selamat Datang di Siramono!</h2>
+      <p>Siram tanamanmu otomatis tanpa ribet. Hemat air, hemat waktu, dan tanaman tetap bahagia! 💧🌿</p>
+      <a href="#tentang" class="btn">Pelajari Lebih Lanjut</a>
+    </div>
+  </section>
+
+  <section id="tentang" class="section">
+    <div class="container">
+      <h2>Apa itu Siramono?</h2>
+      <p>Siramono adalah aplikasi penyiraman tanaman otomatis berbasis teknologi IoT dan sensor kelembaban.</p>
+      <p>Cocok untuk kamu yang sibuk, tapi tetap ingin tanaman terawat dengan baik.</p>
+
+      <div class="features">
+        <div class="feature-box">
+          <img src="https://i.imgur.com/xvRU2nM.png" alt="Tanaman Sehat">
+          <p>Tanaman Sehat 🌱</p>
+        </div>
+        <div class="feature-box">
+          <img src="https://i.imgur.com/7xTn5fb.png" alt="Penyiraman Otomatis">
+          <p>Penyiraman Otomatis 💧</p>
+        </div>
+        <div class="feature-box">
+          <img src="https://i.imgur.com/BhzxZ9T.png" alt="Efisiensi Waktu">
+          <p>Hemat Waktu & Energi ⏰</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Siramono. Dibuat dengan cinta untuk pecinta tanaman 🌸
+  </footer>
 </body>
 
 </html>
