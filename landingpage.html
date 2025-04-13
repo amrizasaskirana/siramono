@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Siramono - Penyiram Tanaman Otomatis</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -20,7 +21,7 @@
     }
 
     header {
-      background-color: #4a7752;
+      background-color: #16a34a;
       color: white;
       padding: 1rem 2rem;
       display: flex;
@@ -34,12 +35,38 @@
       text-decoration: none;
     }
 
+    .logo {
+      height: 70px;
+      /* Sesuaikan ukuran tinggi logo */
+      width: auto;
+    }
+
     .hero {
+      background-image: url('./img/tanaman6.jpg');
+      background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2rem;
       background-color: #e7f2e1;
+    }
+
+    .hero-section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 8px;
     }
 
     .hero-text {
@@ -103,8 +130,8 @@
 </head>
 
 <body>
-  <header>
-    <div><strong>Siramono</strong></div>
+  <header class="bg-green-600 text-white p-2 flex justify-between w-full items-center px-8">
+    <img src="./img/siramono_logo.png" alt="Siramono Logo" class="logo">
     <nav>
       <a href="login.html">Login</a>
       <a href="register.html">Register</a>
@@ -112,12 +139,13 @@
   </header>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>Hijaukan Bumi Bersama Siramono</h1>
-      <p>Solusi otomatis untuk merawat tanaman kesayangan Anda dengan teknologi penyiraman pintar.</p>
-    </div>
-    <div>
-      <img src="https://via.placeholder.com/300x200" alt="tanaman" />
+    <div class="overlay">
+      <div class="hero-section">
+        <div>
+          <h1>Hijaukan Bumi<br>Bersama Siramono</h1>
+          <p>Solusi otomatis untuk merawat tanaman kesayangan Anda dengan teknologi penyiraman pintar.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -170,13 +198,7 @@
   </section>
 
   <section class="newsletter">
-    <h2>Terhubung dengan Siramono</h2>
-    <p>Dapatkan info, tips, dan promo langsung ke email Anda.</p>
-    <form>
-      <input type="text" placeholder="Nama Anda" />
-      <input type="email" placeholder="Email Anda" />
-      <button type="submit">Berlangganan</button>
-    </form>
+    <h2>Stay Connected with Siramono</h2>
   </section>
 
   <footer>
