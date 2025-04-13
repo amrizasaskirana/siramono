@@ -11,6 +11,7 @@ $hasil = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Daftar Tanaman - Siramono</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
@@ -21,7 +22,13 @@ $hasil = mysqli_query($conn, $query);
     </style>
 </head>
 
-<body>
+<body class="bg-green-100 text-gray-800 font-sans flex flex-col min-h-screen">
+    <header class="bg-green-600 text-white p-2 flex justify-between w-full items-center px-8">
+            <img src="../img/siramono_logo.png" alt="Siramono Logo" class="h-20">
+            <nav class="space-x-4">
+                <button class="text-lg font-semibold hover:underline"
+                    onclick="location.href='../beranda.html'">Beranda</button>
+        </header>
     <div class="container mt-4">
         <div class="alert alert-success text-center">
             <h2>DAFTAR TANAMAN SIRAMONO</h2>
