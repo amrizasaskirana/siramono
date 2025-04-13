@@ -1,147 +1,186 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siramono - Smart Farming</title>
+  <title>Siramono - Penyiram Tanaman Otomatis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #eafaea;
-      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f3f7f0;
+      color: #2f4f4f;
     }
 
     header {
-      background: #27ae60;
+      background-color: #4a7752;
       color: white;
-      padding: 15px 20px;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    header h1 {
-      margin: 0;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      text-decoration: none;
+    header nav a {
       color: white;
-      background: #2ecc71;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #27ae60;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
+      margin: 0 1rem;
+      text-decoration: none;
     }
 
     .hero {
-      background-color: #d4fcd3;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .features {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background-color: #e7f2e1;
     }
 
-    .feature-box {
-      background: #ffffff;
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero button {
+      padding: 0.5rem 1rem;
+      background-color: #6ca56f;
+      color: white;
+      border: none;
       border-radius: 10px;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      width: 220px;
-      transition: transform 0.3s;
+      cursor: pointer;
     }
 
-    .feature-box:hover {
-      transform: translateY(-5px);
+    .section {
+      padding: 2rem;
     }
 
-    .feature-box img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 10px;
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1 1 200px;
+    }
+
+    .testimonials,
+    .newsletter {
+      background-color: #e7f2e1;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      margin-bottom: 1rem;
     }
 
     footer {
-      background: #27ae60;
+      background-color: #4a7752;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Siramono</h1>
-    <div>
-      <a href="login.html" class="btn">Login</a>
-      <a href="register.html" class="btn">Register</a>
-    </div>
+    <div><strong>Siramono</strong></div>
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
   </header>
 
-  <section class="section hero">
-    <div class="container">
-      <h2>Selamat Datang di Siramono!</h2>
-      <p>Siram tanamanmu otomatis tanpa ribet. Hemat air, hemat waktu, dan tanaman tetap bahagia! 💧🌿</p>
-      <a href="#tentang" class="btn">Pelajari Lebih Lanjut</a>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hijaukan Bumi Bersama Siramono</h1>
+      <p>Solusi otomatis untuk merawat tanaman kesayangan Anda dengan teknologi penyiraman pintar.</p>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200" alt="tanaman" />
     </div>
   </section>
 
-  <section id="tentang" class="section">
-    <div class="container">
-      <h2>Apa itu Siramono?</h2>
-      <p>Siramono adalah aplikasi penyiraman tanaman otomatis berbasis teknologi IoT dan sensor kelembaban.</p>
-      <p>Cocok untuk kamu yang sibuk, tapi tetap ingin tanaman terawat dengan baik.</p>
-
-      <div class="features">
-        <div class="feature-box">
-          <img src="https://i.imgur.com/xvRU2nM.png" alt="Tanaman Sehat">
-          <p>Tanaman Sehat 🌱</p>
-        </div>
-        <div class="feature-box">
-          <img src="https://i.imgur.com/7xTn5fb.png" alt="Penyiraman Otomatis">
-          <p>Penyiraman Otomatis 💧</p>
-        </div>
-        <div class="feature-box">
-          <img src="https://i.imgur.com/BhzxZ9T.png" alt="Efisiensi Waktu">
-          <p>Hemat Waktu & Energi ⏰</p>
-        </div>
+  <section class="section" id="produk">
+    <h2>Produk Unggulan</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Siramono Mini</h3>
+        <p>Penyiram otomatis untuk pot kecil di rumah.</p>
+      </div>
+      <div class="card">
+        <h3>Siramono Plus</h3>
+        <p>Dilengkapi sensor kelembaban dan pengaturan otomatis.</p>
+      </div>
+      <div class="card">
+        <h3>Siramono Pro</h3>
+        <p>Kontrol lewat aplikasi, cocok untuk kebun rumah tangga.</p>
       </div>
     </div>
   </section>
 
+  <section class="section">
+    <h2>Kenapa Memilih Siramono?</h2>
+    <ul>
+      <li>✅ Membantu untuk mengingatkan keperluan tanamanmu</li>
+      <li>✅ Kualitas tanaman dapat terjamin</li>
+      <li>✅ Tersambung dengan robot penyiram otomatis</li>
+    </ul>
+  </section>
+
+  <section class="section" id="koleksi">
+    <h2>Jelajahi Koleksi</h2>
+    <div class="cards">
+      <div class="card">Tanaman Indoor</div>
+      <div class="card">Tanaman Outdoor</div>
+      <div class="card">Produk Perawatan</div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <h2>Kata Pelanggan</h2>
+    <div class="testimonial">
+      <strong>Andi</strong>
+      <p>"Siramono sangat membantu saya dalam merawat tanaman di balkon!"</p>
+    </div>
+    <div class="testimonial">
+      <strong>Dewi</strong>
+      <p>"Produk canggih dan pelayanan sangat baik!"</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Terhubung dengan Siramono</h2>
+    <p>Dapatkan info, tips, dan promo langsung ke email Anda.</p>
+    <form>
+      <input type="text" placeholder="Nama Anda" />
+      <input type="email" placeholder="Email Anda" />
+      <button type="submit">Berlangganan</button>
+    </form>
+  </section>
+
   <footer>
-    &copy; 2025 Siramono. Dibuat dengan cinta untuk pecinta tanaman 🌸
+    &copy; 2025 Siramono. Semua hak dilindungi.
   </footer>
 </body>
 
