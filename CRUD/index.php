@@ -28,14 +28,15 @@ $hasil = mysqli_query($conn, $query);
 
 <body class="bg-green-100 text-gray-800 font-sans flex flex-col min-h-screen">
     <header class="bg-green-600 text-white p-2 flex justify-between w-full items-center px-8">
-            <img src="../img/siramono_logo.png" alt="Siramono Logo" class="h-20">
-            <nav class="space-x-4">
-                <button class="text-lg font-semibold hover:underline"
-                    onclick="location.href='../beranda.html'">Beranda</button>
-        </header>
+        <img src="../img/siramono_logo.png" alt="Siramono Logo" class="h-20">
+        <nav class="space-x-4">
+            <button class="text-lg font-semibold hover:underline mr-4"
+                onclick="location.href='../beranda.html'">Beranda</button>
+        </nav>
+    </header>
     <div class="container mt-4">
         <div class="alert alert-success text-center">
-            <h1 style="font-weight: bold;">DAFTAR TANAMAN SIRAMONO</h1>
+            <h1 style="font-weight: bold; font-size:24px">DAFTAR TANAMAN SIRAMONO</h1>
         </div>
         <a href="tambahtanaman.php" class="btn btn-primary mb-3">Tambah Tanaman</a>
         <a href="../beranda.html" class="btn btn-primary mb-3">Beranda</a>
