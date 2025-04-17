@@ -25,41 +25,196 @@
       <p class="text-lg text-gray-700 mt-2">Sudahkah kamu merawat tanamanmu hari ini?</p>
     </div>
 
-    <!-- Konten Tengah -->
-    <div class="mt-10 flex justify-center items-start gap-4 flex-wrap">
-      <!-- Kartu Tanaman -->
-      <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
-        <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
-          class="w-full h-40 object-cover rounded-lg mb-2" />
-        <p class="text-lg font-semibold">Rain Lily White</p>
-        <p class="text-yellow-500 mt-2">✨ Rekomendasi Tanaman Hari Ini ✨</p>
-      </div>
+    <!-- Carousel Container -->
+    <div class="relative w-full mt-10 overflow-hidden">
+      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
 
-      <!-- Kotak Keterangan -->
-      <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
-        <!-- Keuntungan -->
-        <div class="mb-4 border-b border-gray-400 pb-4">
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
-          <ul class="list-disc list-inside text-sm text-gray-800">
-            <li>Berbunga indah dan bisa mekar berulang kali.</li>
-            <li>Mudah tumbuh di pot maupun tanah.</li>
-            <li>Tahan panas dan cocok untuk iklim tropis.</li>
-            <li>Nggak butuh perawatan yang ribet. Cukup matahari, air, dan sedikit pupuk udah cukup.</li>
-            <li>Mereka memperbanyak diri lewat umbi dan bisa menyebar dengan cepat.</li>
-          </ul>
+        <!-- Slide 1 -->
+        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
+          <!-- Kartu Tanaman -->
+          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
+            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
+              class="w-full h-40 object-cover rounded-lg mb-2" />
+            <p class="text-lg font-semibold">Rain Lily White</p>
+            <p class="text-yellow-500 mt-2">✨ Rekomendasi Tanaman Hari Ini ✨</p>
+          </div>
+
+          <!-- Kotak Keterangan -->
+          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
+            <div class="mb-4 border-b border-gray-400 pb-4">
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Berbunga indah dan bisa mekar berulang kali.</li>
+                <li>Mudah tumbuh di pot maupun tanah.</li>
+                <li>Tahan panas dan cocok untuk iklim tropis.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Membutuhkan pencahayaan cukup untuk berbunga.</li>
+                <li>Sensitif terhadap overwatering (kelebihan air).</li>
+                <li>Perlu drainase yang baik untuk mencegah akar busuk.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <!-- Tantangan -->
-        <div>
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
-          <ul class="list-disc list-inside text-sm text-gray-800">
-            <li>Membutuhkan pencahayaan cukup untuk berbunga.</li>
-            <li>Sensitif terhadap overwatering (kelebihan air).</li>
-            <li>Akar dan umbinya bisa busuk kalau tanahnya terlalu lembap terus-menerus.<li>
-            <li>Biasanya hanya mekar setelah hujan atau disiram banyak air. Jadi, nggak berbunga terus-menerus.<li>
-            <li>Perlu drainase yang baik untuk mencegah akar busuk.</li>
-          </ul>
+        <!-- Slide 2 (Contoh duplikat, bisa ganti gambar & teks) -->
+        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
+          <!-- Kartu Tanaman -->
+          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
+            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
+              class="w-full h-40 object-cover rounded-lg mb-2" />
+            <p class="text-lg font-semibold">Rain Lily White</p>
+            <p class="text-yellow-500 mt-2">✨ Tanaman Favoritmu ✨</p>
+          </div>
+
+          <!-- Kotak Keterangan -->
+          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
+            <div class="mb-4 border-b border-gray-400 pb-4">
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Tampil segar di berbagai cuaca.</li>
+                <li>Tidak butuh perawatan rumit.</li>
+                <li>Bisa jadi hiasan indoor maupun outdoor.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Hama ulat kadang menyerang daun muda.</li>
+                <li>Perlu sinar matahari pagi agar optimal.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
+
+      <!-- Tombol Navigasi -->
+      <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">←</button>
+      <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">→</button>
     </div>
+
   </main>
+
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById('carousel');
+    const totalSlides = carousel.children.length;
+
+    function updateSlide() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+        <!-- List Tanaman -->
+        <div
+            class="container mt-10 mx-auto font-serif sm:flex-row flex flex-col items-center gap-6 sm:flex-wrap sm:gap-6 lg:flex-nowrap sm:justify-evenly">
+            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
+                <img src="./img/tanaman1.jpg" alt="Tanaman Hias Daun" class="w-full h-44 object-cover rounded-lg">
+                <p class="mt-3 font-semibold">Tanaman Hias Daun</p>
+            </div>
+            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
+                <img src="./img/tanaman2.jpg" alt="Tanaman Hias Bunga" class="w-full h-44 object-cover rounded-lg">
+                <p class="mt-3 font-semibold">Tanaman Hias Bunga</p>
+            </div>
+            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
+                <img src="./img/tanaman3.jpg" alt="Tanaman Hias Air" class="w-full h-44 object-cover rounded-lg">
+                <p class="mt-3 font-semibold">Tanaman Hias Air</p>
+            </div>
+            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
+                <img src="./img/tanaman4.jpg" alt="Tanaman Hias Gantung" class="w-full h-44 object-cover rounded-lg">
+                <p class="mt-3 font-semibold">Tanaman Hias Gantung</p>
+            </div>
+            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
+                <img src="./img/tanaman5.jpg" alt="Tanaman Hias Berduri" class="w-full h-44 object-cover rounded-lg">
+                <p class="mt-3 font-semibold">Tanaman Hias Berduri</p>
+            </div>
+        </div>
+
+        <!-- Chart Data Tanaman -->
+        <div class="mt-12 w-full max-w-4xl mx-auto bg-white p-6 shadow-lg rounded-xl">
+            <h2 class="text-2xl font-semibold text-center">Grafik Jumlah Tanaman Berdasarkan Jenis</h2>
+            <canvas id="tanamanChart"></canvas>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white text-center p-5 mt-12 w-full">
+        <a href="aboutus.html" class="underline hover:text-gray-200">About Us</a>
+        <p class="mt-2">© Siramono 2025</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menentukan ucapan berdasarkan waktu WIB
+        function getGreeting() {
+            let now = new Date();
+            let hours = now.getHours();
+            let greetingText = "Halo, ";
+
+            if (hours >= 4 && hours < 12) {
+                greetingText += "Selamat Pagi!";
+            } else if (hours >= 12 && hours < 15) {
+                greetingText += "Selamat Siang!";
+            } else if (hours >= 15 && hours < 18) {
+                greetingText += "Selamat Sore!";
+            } else {
+                greetingText += "Selamat Malam!";
+            }
+
+            document.getElementById("greeting").innerText = greetingText;
+        }
+
+        // Panggil fungsi ucapan saat halaman dimuat
+        getGreeting();
+
+        // Mengambil data dari API PHP
+        fetch('data.php')
+            .then(response => response.json())
+            .then(data => {
+                const ctx = document.getElementById('tanamanChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.jenis_tanaman,
+                        datasets: [{
+                            label: 'Jumlah Tanaman',
+                            data: data.jumlah_tanaman,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+
+</html>
