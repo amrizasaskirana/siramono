@@ -2,35 +2,128 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Siramono</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Siramono</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-green-100 text-gray-800 font-sans flex flex-col min-h-screen items-center">
-    <!-- Header -->
-    <header class="bg-green-600 text-white p-2 flex justify-between w-full items-center px-8">
-        <img src="./img/siramono_logo.png" alt="Siramono Logo" class="h-20">
-        <nav class="space-x-4">
-            <button class="text-lg font-semibold hover:underline"
-                onclick="location.href='beranda.html'">Beranda</button>
-            <button class="text-lg font-semibold hover:underline"
-                onclick="location.href='./CRUD/index.php'">Tanamanku</button>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="bg-green-600 text-white p-4 flex justify-between w-full items-center px-8">
+    <h1 class="text-xl font-bold">Siramono</h1>
+    <nav class="space-x-6">
+      <button class="text-lg font-semibold hover:underline" onclick="location.href='beranda.html'">Beranda</button>
+      <button class="text-lg font-semibold hover:underline" onclick="location.href='./CRUD/index.php'">Tanamanku</button>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow text-center px-4 w-full max-w-5xl">
-        <div class="mt-8">
-            <h1 class="text-5xl font-bold">Welcome to Siramono</h1>
+  <!-- Main Content -->
+  <main class="flex-grow text-center px-4 w-full max-w-5xl">
+    <div class="mt-8">
+      <h1 class="text-5xl font-bold">Welcome to Siramono</h1>
+      <p class="text-lg text-gray-700 mt-2">Sudahkah kamu merawat tanamanmu hari ini?</p>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative w-full mt-10 overflow-hidden">
+      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+
+        <!-- Slide 1 -->
+        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
+          <!-- Kartu Tanaman -->
+          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
+            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
+              class="w-full h-40 object-cover rounded-lg mb-2" />
+            <p class="text-lg font-semibold">Rain Lily White</p>
+            <p class="text-yellow-500 mt-2">✨ Rekomendasi Tanaman Hari Ini ✨</p>
+          </div>
+
+          <!-- Kotak Keterangan -->
+          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
+            <div class="mb-4 border-b border-gray-400 pb-4">
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Berbunga indah dan bisa mekar berulang kali.</li>
+                <li>Mudah tumbuh di pot maupun tanah.</li>
+                <li>Tahan panas dan cocok untuk iklim tropis.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Membutuhkan pencahayaan cukup untuk berbunga.</li>
+                <li>Sensitif terhadap overwatering (kelebihan air).</li>
+                <li>Perlu drainase yang baik untuk mencegah akar busuk.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="mt-6">
-            <p id="greeting" class="text-2xl font-medium"></p>
-            <p class="text-lg text-gray-700">Sudahkah kamu merawat tanamanmu hari ini?</p>
+        <!-- Slide 2 (Contoh duplikat, bisa ganti gambar & teks) -->
+        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
+          <!-- Kartu Tanaman -->
+          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
+            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
+              class="w-full h-40 object-cover rounded-lg mb-2" />
+            <p class="text-lg font-semibold">Rain Lily White</p>
+            <p class="text-yellow-500 mt-2">✨ Tanaman Favoritmu ✨</p>
+          </div>
+
+          <!-- Kotak Keterangan -->
+          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
+            <div class="mb-4 border-b border-gray-400 pb-4">
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Tampil segar di berbagai cuaca.</li>
+                <li>Tidak butuh perawatan rumit.</li>
+                <li>Bisa jadi hiasan indoor maupun outdoor.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800">
+                <li>Hama ulat kadang menyerang daun muda.</li>
+                <li>Perlu sinar matahari pagi agar optimal.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">←</button>
+      <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">→</button>
+    </div>
+
+  </main>
+
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById('carousel');
+    const totalSlides = carousel.children.length;
+
+    function updateSlide() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+  </script>
+
+</body>
+
+</html>
+
 
         <!-- List Tanaman -->
         <div
