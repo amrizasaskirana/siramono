@@ -4,205 +4,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siramono - Penyiram Tanaman Otomatis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Siramono - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #f3f7f0;
-      color: #2f4f4f;
+      background-color: #fff;
+      color: #333;
     }
 
     header {
-      background-color: #16a34a;
-      color: white;
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 25px;
+      background-color: #fff;
     }
 
-    header nav a {
-      color: white;
-      margin: 0 1rem;
+    nav a {
+      margin: 0 15px;
       text-decoration: none;
+      color: #000;
+      font-weight: 500;
     }
 
-    .logo {
-      height: 70px; 
-      width: auto;
-    }
-
-    .hero {
-      background-image: url('./img/tanaman6.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #e7f2e1;
-    }
-
-    .hero-section {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-
-    .overlay {
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .hero-text {
-      max-width: 600px;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero button {
-      padding: 0.5rem 1rem;
-      background-color: #6ca56f;
-      color: white;
+    .auth-buttons button {
+      margin-left: 15px;
+      padding: 8px 16px;
       border: none;
-      border-radius: 10px;
+      border-radius: 45px;
       cursor: pointer;
     }
 
-    .section {
-      padding: 2rem;
-    }
-
-    .section h2 {
-      margin-bottom: 1rem;
-    }
-
-    .cards {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex: 1 1 200px;
-    }
-
-    .testimonials,
-    .newsletter {
-      background-color: #e7f2e1;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-
-    .testimonial {
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: #4a7752;
+    .signin {
+      background-color: #647D3D;
       color: white;
+    }
+
+    .hero img.hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      color: white;
+      transform: translateY(-50%);
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .hero-text p1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 40px 20px 10px 20px;
+    }
+
+    .plant-card {
+      background-color: #f8f8f8;
+      border-radius: 20px;
+      overflow: hidden;
       text-align: center;
-      padding: 1rem;
+      width: calc(20% - 20px);
+      min-width: 250px;
+    }
+
+    .plant-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .plant-card p,
+    .community-card p {
+      padding: 20px;
+    }
+
+    .section-community {
+      display: flex;
+      padding: 20px;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .community {
+      display: flex;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    .community-left {
+      flex: 2;
+    }
+
+    .community-right {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      grid-template-rows: auto auto;
+    }
+
+    .community-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .community-card.large {
+      height: 100%;
+    }
+
+    .community-card.small {
+      height: 350px;
+      width: 350px;
+    }
+
+    .community-card.small.bottom {
+      width: 90%;
+      margin-top: 20px;
+      grid-column: span 2;
+    }
+
+    .recommendations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 20px;
+      justify-content: space-between;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="./img/siramono_logo.png" alt="Siramono Logo" class="logo">
+    <div class="logo">
+      <img src="./img/siramono_logo.png" alt="Siramono" height="70">
+    </div>
     <nav>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <a href="#">Beranda</a>
+      <a href="#">Tanamanku</a>
+      <a href="#">Aktivitas</a>
+      <a href="#">Komunitas</a>
     </nav>
+    <div class="auth-buttons">
+      <a href="login.html"><button>Log In</button></a>
+      <a href="register.html"><button class="signin">Sign In</button></a>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="overlay">
-      <div class="hero-section">
-        <div>
-          <h1>Hijaukan Bumi<br>Bersama Siramono</h1>
-          <p>Solusi otomatis untuk merawat tanaman kesayangan Anda dengan teknologi penyiraman pintar.</p>
-        </div>
+    <img src="./img/header1.png" alt="Hero Image" class="hero-img">
+    <div class="hero-text">
+      <p1>Welcome to</p1>
+      <h1>Siramono</h1>
+      <p>one step closer to a green world</p>
+    </div>
+  </section>
+
+  <div class="section-title">Rekomendasi Tanaman</div>
+  <section class="recommendations">
+    <div class="plant-card">
+      <img src="./img/rekomtanaman1.png" alt="Tanaman Hias Daun">
+      <p>Tanaman Hias Daun</p>
+    </div>
+    <div class="plant-card">
+      <img src="./img/rekomtanaman2.png" alt="Tanaman Hias Bunga">
+      <p>Tanaman Hias Bunga</p>
+    </div>
+    <div class="plant-card">
+      <img src="./img/rekomtanaman3.png" alt="Tanaman Hias Air">
+      <p>Tanaman Hias air</p>
+    </div>
+    <div class="plant-card">
+      <img src="./img/rekomtanaman4.png" alt="Tanaman Hias Gantung">
+      <p>Tanaman Hias Gantung</p>
+    </div>
+    <div class="plant-card">
+      <img src="./img/rekomtanaman5.png" alt="Tanaman Hias Berduri">
+      <p>Tanaman Hias Berduri</p>
+    </div>
+  </section>
+
+  <div class="section-community">
+    <div class="section-title" style="font-size: 40px; flex: 1;">Discover Our Community <br><span
+        style="color:#647D3D; font-weight: 700;">Popular and
+        New</span></div>
+    <section class="community-intro" style="flex: 1;">
+      <p>Siramono Community adalah tempat berbagi dan berdiskusi seputar Siramono robot penyiram tanaman pintar. Temukan
+        inspirasi, tips, dan dukungan teknis untuk merawat tanamanmu dengan bantuan teknologi. Temui sesama entusiast
+        Tanaman di Komunitas Siramono!</p>
+    </section>
+  </div>
+
+  <section class="community">
+    <div class="community-left">
+      <div class="community-card large">
+        <img src="./img/komunitas1.png" alt="Monstera">
+      </div>
+    </div>
+    <div class="community-right">
+      <div class="community-card small">
+        <img src="./img/komunitas2.png" alt="Indoor Plants">
+      </div>
+      <div class="community-card small">
+        <img src="./img/komunitas3.png" alt="Please Don't Die">
+      </div>
+      <div class="community-card small bottom">
+        <img src="./img/komunitas4.png" alt="Garden Hacks">
       </div>
     </div>
   </section>
-
-  <section class="section" id="produk">
-    <h2>Produk Unggulan</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Siramono Mini</h3>
-        <p>Penyiram otomatis untuk pot kecil di rumah.</p>
-      </div>
-      <div class="card">
-        <h3>Siramono Plus</h3>
-        <p>Dilengkapi sensor kelembaban dan pengaturan otomatis.</p>
-      </div>
-      <div class="card">
-        <h3>Siramono Pro</h3>
-        <p>Kontrol lewat aplikasi, cocok untuk kebun rumah tangga.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Kenapa Memilih Siramono?</h2>
-    <ul>
-      <li>✅ Membantu untuk mengingatkan keperluan tanamanmu</li>
-      <li>✅ Kualitas tanaman dapat terjamin</li>
-      <li>✅ Tersambung dengan robot penyiram otomatis</li>
-    </ul>
-  </section>
-
-  <section class="section" id="koleksi">
-    <h2>Jelajahi Koleksi</h2>
-    <div class="cards">
-      <div class="card">Tanaman Indoor</div>
-      <div class="card">Tanaman Outdoor</div>
-      <div class="card">Produk Perawatan</div>
-    </div>
-  </section>
-
-  <section class="section testimonials">
-    <h2>Kata Pelanggan</h2>
-    <div class="testimonial">
-      <strong>Andi</strong>
-      <p>"Siramono sangat membantu saya dalam merawat tanaman di balkon!"</p>
-    </div>
-    <div class="testimonial">
-      <strong>Dewi</strong>
-      <p>"Produk canggih dan pelayanan sangat baik!"</p>
-    </div>
-  </section>
-
-  <section class="newsletter">
-    <h2>Stay Connected with Siramono</h2>
-  </section>
-
-  <footer>
-    &copy; 2025 Siramono. Semua hak dilindungi.
-  </footer>
 </body>
 
 </html>
