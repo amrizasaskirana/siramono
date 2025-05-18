@@ -1,220 +1,243 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda - Siramono</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siramono - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 25px;
+      background-color: #fff;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .auth-buttons button {
+      margin-left: 15px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 45px;
+      cursor: pointer;
+    }
+
+    .signin {
+      background-color: #647D3D;
+      color: white;
+    }
+
+    .hero img.hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      color: white;
+      transform: translateY(-50%);
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .hero-text p1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 40px 20px 10px 20px;
+    }
+
+    .plant-card {
+      background-color: #f8f8f8;
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      width: calc(20% - 20px);
+      min-width: 250px;
+    }
+
+    .plant-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .plant-card p,
+    .community-card p {
+      padding: 20px;
+    }
+
+    .section-community {
+      display: flex;
+      padding: 20px;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .community {
+      display: flex;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    .community-left {
+      flex: 2;
+    }
+
+    .community-right {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      grid-template-rows: auto auto;
+    }
+
+    .community-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .community-card.large {
+      height: 100%;
+    }
+
+    .community-card.small {
+      height: 350px;
+      width: 350px;
+    }
+
+    .community-card.small.bottom {
+      width: 90%;
+      margin-top: 20px;
+      grid-column: span 2;
+    }
+
+    .recommendations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 
-<body class="bg-green-100 text-gray-800 font-sans flex flex-col min-h-screen items-center">
-  <!-- Header -->
-  <header class="bg-green-600 text-white p-4 flex justify-between w-full items-center px-8">
-    <h1 class="text-xl font-bold">Siramono</h1>
-    <nav class="space-x-6">
-      <button class="text-lg font-semibold hover:underline" onclick="location.href='beranda.html'">Beranda</button>
-      <button class="text-lg font-semibold hover:underline" onclick="location.href='./CRUD/index.php'">Tanamanku</button>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./img/siramono_logo.png" alt="Siramono" height="70">
+    </div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tanamanku</a>
+      <a href="#">Aktivitas</a>
+      <a href="#">Komunitas</a>
     </nav>
+    <div class="auth-buttons">
+      <a href="login.html"><button>Log In</button></a>
+      <a href="register.html"><button class="signin">Sign In</button></a>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="flex-grow text-center px-4 w-full max-w-5xl">
-    <div class="mt-8">
-      <h1 class="text-5xl font-bold">Welcome to Siramono</h1>
-      <p class="text-lg text-gray-700 mt-2">Sudahkah kamu merawat tanamanmu hari ini?</p>
+  <section class="hero">
+    <img src="./img/header1.png" alt="Hero Image" class="hero-img">
+    <div class="hero-text">
+      <p1>Welcome to</p1>
+      <h1>Siramono</h1>
+      <p>one step closer to a green world</p>
     </div>
+  </section>
 
-    <!-- Carousel Container -->
-    <div class="relative w-full mt-10 overflow-hidden">
-      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+  <div class="section-title">Rekomendasi Tanaman</div>
+  <section class="recommendations">
+    <div class="plant-card">
+      <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/tanamanlidahmertua.jpg?raw=true alt" alt="Tanaman Hias Daun">
+      <p>Tanaman Hias Daun</p>
+    </div>
+    <div class="plant-card">
+      <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true alt="Tanaman Hias Bunga">
+      <p>Tanaman Hias Bunga</p>
+    </div>
+    <div class="plant-card">
+      <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/seroja.jpg?raw=true alt" alt="Tanaman Hias Air">
+      <p>Tanaman Hias air</p>
+    </div>
+    <div class="plant-card">
+      <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/ANGGREK%20HITAMMMM.png?raw=true alt" alt="Tanaman Hias Gantung">
+      <p>Tanaman Hias Gantung</p>
+    </div>
+    <div class="plant-card">
+      <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/weirdlookingcactus.png?raw=true alt" alt="Tanaman Hias Berduri">
+      <p>Tanaman Hias Berduri</p>
+    </div>
+  </section>
 
-        <!-- Slide 1 -->
-        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
-          <!-- Kartu Tanaman -->
-          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
-            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
-              class="w-full h-40 object-cover rounded-lg mb-2" />
-            <p class="text-lg font-semibold">Rain Lily White</p>
-            <p class="text-yellow-500 mt-2">✨ Rekomendasi Tanaman Hari Ini ✨</p>
-          </div>
+  <div class="section-community">
+    <div class="section-title" style="font-size: 40px; flex: 1;">Discover Our Community <br><span
+        style="color:#647D3D; font-weight: 700;">Popular and
+        New</span></div>
+    <section class="community-intro" style="flex: 1;">
+      <p>Siramono Community adalah tempat berbagi dan berdiskusi seputar Siramono robot penyiram tanaman pintar. Temukan
+        inspirasi, tips, dan dukungan teknis untuk merawat tanamanmu dengan bantuan teknologi. Temui sesama entusiast
+        Tanaman di Komunitas Siramono!</p>
+    </section>
+  </div>
 
-          <!-- Kotak Keterangan -->
-          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
-            <div class="mb-4 border-b border-gray-400 pb-4">
-              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
-              <ul class="list-disc list-inside text-sm text-gray-800">
-                <li>Berbunga indah dan bisa mekar berulang kali.</li>
-                <li>Mudah tumbuh di pot maupun tanah.</li>
-                <li>Tahan panas dan cocok untuk iklim tropis.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
-              <ul class="list-disc list-inside text-sm text-gray-800">
-                <li>Membutuhkan pencahayaan cukup untuk berbunga.</li>
-                <li>Sensitif terhadap overwatering (kelebihan air).</li>
-                <li>Perlu drainase yang baik untuk mencegah akar busuk.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 (Contoh duplikat, bisa ganti gambar & teks) -->
-        <div class="min-w-full flex justify-center items-start gap-4 flex-wrap">
-          <!-- Kartu Tanaman -->
-          <div class="bg-white shadow-lg rounded-xl w-64 text-center p-4">
-            <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/rainlilywhite.png?raw=true" alt="Rain Lily White"
-              class="w-full h-40 object-cover rounded-lg mb-2" />
-            <p class="text-lg font-semibold">Rain Lily White</p>
-            <p class="text-yellow-500 mt-2">✨ Tanaman Favoritmu ✨</p>
-          </div>
-
-          <!-- Kotak Keterangan -->
-          <div class="bg-gray-200 rounded-xl w-96 p-4 flex flex-col justify-between text-left shadow-md">
-            <div class="mb-4 border-b border-gray-400 pb-4">
-              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-green-600">✅ Keuntungan</h3>
-              <ul class="list-disc list-inside text-sm text-gray-800">
-                <li>Tampil segar di berbagai cuaca.</li>
-                <li>Tidak butuh perawatan rumit.</li>
-                <li>Bisa jadi hiasan indoor maupun outdoor.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-yellow-600">⚠️ Tantangan</h3>
-              <ul class="list-disc list-inside text-sm text-gray-800">
-                <li>Hama ulat kadang menyerang daun muda.</li>
-                <li>Perlu sinar matahari pagi agar optimal.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+  <section class="community">
+    <div class="community-left">
+      <div class="community-card large">
+        <img src="./img/komunitas1.png" alt="Monstera">
       </div>
-
-      <!-- Tombol Navigasi -->
-      <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">←</button>
-      <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-green-700">→</button>
     </div>
-
-  </main>
-
-  <script>
-    let currentIndex = 0;
-    const carousel = document.getElementById('carousel');
-    const totalSlides = carousel.children.length;
-
-    function updateSlide() {
-      const offset = -currentIndex * 100;
-      carousel.style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlide();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
-  </script>
-
-</body>
-
-</html>
-
-
-        <!-- List Tanaman -->
-        <div
-            class="container mt-10 mx-auto font-serif sm:flex-row flex flex-col items-center gap-6 sm:flex-wrap sm:gap-6 lg:flex-nowrap sm:justify-evenly">
-            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
-                <img src="./img/tanaman1.jpg" alt="Tanaman Hias Daun" class="w-full h-44 object-cover rounded-lg">
-                <p class="mt-3 font-semibold">Tanaman Hias Daun</p>
-            </div>
-            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
-                <img src="./img/tanaman2.jpg" alt="Tanaman Hias Bunga" class="w-full h-44 object-cover rounded-lg">
-                <p class="mt-3 font-semibold">Tanaman Hias Bunga</p>
-            </div>
-            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
-                <img src="./img/tanaman3.jpg" alt="Tanaman Hias Air" class="w-full h-44 object-cover rounded-lg">
-                <p class="mt-3 font-semibold">Tanaman Hias Air</p>
-            </div>
-            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
-                <img src="./img/tanaman4.jpg" alt="Tanaman Hias Gantung" class="w-full h-44 object-cover rounded-lg">
-                <p class="mt-3 font-semibold">Tanaman Hias Gantung</p>
-            </div>
-            <div class="bg-white p-5 w-80 shadow-lg rounded-xl text-center hover:shadow-xl transition">
-                <img src="./img/tanaman5.jpg" alt="Tanaman Hias Berduri" class="w-full h-44 object-cover rounded-lg">
-                <p class="mt-3 font-semibold">Tanaman Hias Berduri</p>
-            </div>
-        </div>
-
-        <!-- Chart Data Tanaman -->
-        <div class="mt-12 w-full max-w-4xl mx-auto bg-white p-6 shadow-lg rounded-xl">
-            <h2 class="text-2xl font-semibold text-center">Grafik Jumlah Tanaman Berdasarkan Jenis</h2>
-            <canvas id="tanamanChart"></canvas>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-green-600 text-white text-center p-5 mt-12 w-full">
-        <a href="aboutus.html" class="underline hover:text-gray-200">About Us</a>
-        <p class="mt-2">© Siramono 2025</p>
-    </footer>
-
-    <script>
-        // Fungsi untuk menentukan ucapan berdasarkan waktu WIB
-        function getGreeting() {
-            let now = new Date();
-            let hours = now.getHours();
-            let greetingText = "Halo, ";
-
-            if (hours >= 4 && hours < 12) {
-                greetingText += "Selamat Pagi!";
-            } else if (hours >= 12 && hours < 15) {
-                greetingText += "Selamat Siang!";
-            } else if (hours >= 15 && hours < 18) {
-                greetingText += "Selamat Sore!";
-            } else {
-                greetingText += "Selamat Malam!";
-            }
-
-            document.getElementById("greeting").innerText = greetingText;
-        }
-
-        // Panggil fungsi ucapan saat halaman dimuat
-        getGreeting();
-
-        // Mengambil data dari API PHP
-        fetch('data.php')
-            .then(response => response.json())
-            .then(data => {
-                const ctx = document.getElementById('tanamanChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: data.jenis_tanaman,
-                        datasets: [{
-                            label: 'Jumlah Tanaman',
-                            data: data.jumlah_tanaman,
-                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
+    <div class="community-right">
+      <div class="community-card small">
+        <img src="./img/komunitas2.png" alt="Indoor Plants">
+      </div>
+      <div class="community-card small">
+        <img src="./img/komunitas3.png" alt="Please Don't Die">
+      </div>
+      <div class="community-card small bottom">
+        <img src="./img/komunitas4.png" alt="Garden Hacks">
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
