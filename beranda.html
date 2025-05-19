@@ -6,26 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Siramono - Landing Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+   <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
 
-    body {
-      background-color: #fff;
-      color: #333;
-    }
+  body {
+    background-color: #fff;
+    color: #333;
+  }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 25px;
-      background-color: #fff;
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: #fff;
+  }
+
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .profile-icon:hover {
+    transform: scale(1.1);
+  }
 
     nav a {
       margin: 0 15px;
@@ -170,9 +190,13 @@
       <a href="#">Aktivitas</a>
       <a href="#">Komunitas</a>
     </nav>
+    
+    <!-- Ganti tombol login/signin dengan ikon user -->
     <div class="auth-buttons">
-      <a href="login.html"><button>Log In</button></a>
-      <a href="register.html"><button class="signin">Sign In</button></a>
+      <a href="login.html">
+        <img src="https://github.com/amrizasaskirana/siramono/blob/main/img/anonymous-sign.jpg?raw=true" 
+             alt="User Profile" class="profile-icon">
+      </a>
     </div>
   </header>
 
