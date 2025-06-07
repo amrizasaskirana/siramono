@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Siramono - Landing Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
       background-color: #fff;
       color: #333;
@@ -40,11 +34,6 @@
       border: none;
       border-radius: 45px;
       cursor: pointer;
-    }
-
-    .signin {
-      background-color: #647D3D;
-      color: white;
     }
 
     .hero img.hero-img {
@@ -135,7 +124,8 @@
     }
 
     .community-card.large {
-      height: 100%;
+      height: 650px;
+      width: 650px;
     }
 
     .community-card.small {
@@ -144,84 +134,108 @@
     }
 
     .community-card.small.bottom {
-      width: 90%;
-      margin-top: 20px;
+      height: 280px;
+      width: 740px;
+      margin-top: 15px;
       grid-column: span 2;
-    }
-
-    .recommendations {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 0 20px;
-      justify-content: space-between;
     }
   </style>
 </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <img src="./img/siramono_logo.png" alt="Siramono" height="70">
-    </div>
-    <nav>
-      <a href="#">Beranda</a>
+<body class="bg-[#f4f1e8] text-gray-800">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-large text-gray-800">
+      <a href="#" class="text-green-900 font-bold">Beranda</a>
       <a href="#">Tanamanku</a>
-      <a href="#">Aktivitas</a>
       <a href="#">Komunitas</a>
-    </nav>
-    <div class="auth-buttons">
-      <a href="login.html"><button>Log In</button></a>
-      <a href="register.html"><button class="signin">Sign In</button></a>
     </div>
-  </header>
+    <div class="flex items-center gap-4">
+      <a href="login.html" class="text-sm text-gray-700">Log In</a>
+      <a href="register.html">
+        <button class="bg-[#798645] text-white text-sm px-5 py-2 rounded-full hover:bg-[#55522a] transition">
+          Sign In
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <div class="bg-white px-6 md:px-12">
+    <div
+      class="bg-[#F2EED7] rounded-2xl flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-md">
+      <!-- Tulisan dan Tombol -->
+      <div class="max-w-xl z-20 ml-16">
+        <h1 class="text-[120px] font-serif text-[#4A5E20] leading-tight">SIRAMONO</h1>
 
-  <section class="hero">
-    <img src="./img/header1.png" alt="Hero Image" class="hero-img">
-    <div class="hero-text">
-      <p1>Welcome to</p1>
-      <h1>Siramono</h1>
-      <p>one step closer to a green world</p>
-    </div>
-  </section>
+        <div class="flex flex-col items-center">
+          <p class="text-xl text-[#6C845A] mb-6 text-center"
+            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 24px;">one step
+            closer to a green
+            world</p>
+          <button class="bg-[#6C845A] hover:bg-[#5b704d] text-white py-3 px-8 rounded-full shadow-lg font-semibold">
+            Let’s Get Started
+          </button>
+        </div>
+      </div>
 
-  <div class="section-title">Rekomendasi Tanaman</div>
-  <section class="recommendations">
-    <div class="plant-card">
-      <img src="./img/rekomtanaman1.png" alt="Tanaman Hias Daun">
-      <p>Tanaman Hias Daun</p>
-    </div>
-    <div class="plant-card">
-      <img src="./img/rekomtanaman2.png" alt="Tanaman Hias Bunga">
-      <p>Tanaman Hias Bunga</p>
-    </div>
-    <div class="plant-card">
-      <img src="./img/rekomtanaman3.png" alt="Tanaman Hias Air">
-      <p>Tanaman Hias air</p>
-    </div>
-    <div class="plant-card">
-      <img src="./img/rekomtanaman4.png" alt="Tanaman Hias Gantung">
-      <p>Tanaman Hias Gantung</p>
-    </div>
-    <div class="plant-card">
-      <img src="./img/rekomtanaman5.png" alt="Tanaman Hias Berduri">
-      <p>Tanaman Hias Berduri</p>
-    </div>
-  </section>
+      <!-- Kanan: Gambar -->
+      <div class="relative w-[400px] md:w-[700px] z-10 mt-12 md:mt-0">
+        <!-- Background daun -->
+        <img src="./img/bgdaun.png" alt="Background daun" class="w-full rounded-xl object-cover">
 
-  <div class="section-community">
-    <div class="section-title" style="font-size: 40px; flex: 1;">Discover Our Community <br><span
-        style="color:#647D3D; font-weight: 700;">Popular and
-        New</span></div>
-    <section class="community-intro" style="flex: 1;">
-      <p>Siramono Community adalah tempat berbagi dan berdiskusi seputar Siramono robot penyiram tanaman pintar. Temukan
-        inspirasi, tips, dan dukungan teknis untuk merawat tanamanmu dengan bantuan teknologi. Temui sesama entusiast
-        Tanaman di Komunitas Siramono!</p>
+        <!-- Daun overlay -->
+        <img src="./img/daun.png" alt="Overlay daun" class="absolute top-[-40px] left-[-80px] w-[280px] z-20">
+      </div>
+    </div>
+
+    <div
+      class="bg-white rounded-2xl flex flex-col md:flex-row items-center justify-between mx-4 md:mx-4 mt-2 p-4 relative z-10">
+      <!-- Rekomendasi Tanaman -->
+      <section class="py-10">
+        <h2 class="text-lg font-semibold mb-4" style="font-size: 24px;">Rekomendasi Tanaman</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-[#F2EED7] p-4 rounded-xl shadow">
+            <img src="./img/aloe.png" alt="Lidah Buaya" class="mb-12 rounded">
+            <h3 class="text-sm font-semibold" style="font-size: 18px;">Lidah Buaya</h3>
+            <p class="text-xs italic">Aloe vera</p>
+          </div>
+          <div class="bg-[#F2EED7] p-4 rounded-xl shadow">
+            <img src="./img/pilea.png" alt="Pilea" class="mb-2 rounded">
+            <h3 class="text-sm font-semibold" style="font-size: 18px;"">Pilea</h3>
+            <p class=" text-xs italic">Pilea peperomioides</p>
+          </div>
+          <div class="bg-[#F2EED7] p-4 rounded-xl shadow">
+            <img src="./img/sirih.png" alt="Sirih Gading Satin" class="mb-2 rounded">
+            <h3 class="text-sm font-semibold" style="font-size: 18px;">Sirih Gading Satin</h3>
+            <p class="text-xs italic">Scindapsus pictus</p>
+          </div>
+          <div class="bg-[#F2EED7] p-4 rounded-xl shadow">
+            <img src="./img/calathea.png" alt="Calathea Fasciata" class="mb-2 rounded">
+            <h3 class="text-sm font-semibold" style="font-size: 18px;">Calathea Fasciata</h3>
+            <p class="text-xs italic">Goeppertia fasciata</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="bg-white section-community">
+    <div class="section-title" style="font-size: 40px; flex: 1; margin-left: 40px;">
+      Discover Our Community <br>
+      <span style="color:#647D3D; font-weight: 700;">Popular and New</span>
+    </div>
+
+    <section class="community-intro" style="font-size: 16px; flex: 1; margin-right: 100px;">
+      <p class="mt-12">Siramono Community adalah tempat berbagi dan berdiskusi seputar Siramono robot penyiram tanaman
+        pintar.
+        Temukan inspirasi, tips, dan dukungan teknis untuk merawat tanamanmu dengan bantuan teknologi.</p>
+      <p class="mt-4">Temui sesama entusiast Tanaman di Komunitas Siramono!</p>
     </section>
   </div>
 
-  <section class="community">
-    <div class="community-left">
+  <section class="community bg-white">
+    <div class="community-left px-6 md:px-12">
       <div class="community-card large">
         <img src="./img/komunitas1.png" alt="Monstera">
       </div>
@@ -238,6 +252,53 @@
       </div>
     </div>
   </section>
+</body>
+
+<!-- Highlight Tanaman -->
+<section class="px-4 py-16 flex justify-center bg-white">
+  <div
+    class="bg-[#e5ebce] px-10 md:px-32 py-20 md:py-28 rounded-3xl flex flex-col md:flex-row items-center gap-12 w-full max-w-[1460px] shadow-lg">
+
+    <!-- Gambar besar -->
+    <div class="bg-[#a6b56e] p-10 md:p-4 rounded-3xl">
+      <img src="./img/aloe.png" alt="Lidah Buaya"
+        class="w-[280px] md:w-[950px] h-auto object-contain drop-shadow-2xl" />
+    </div>
+
+    <!-- Teks -->
+    <div class="text-[#4b5a2a] max-w-2xl">
+      <h3 class="text-5xl font-serif mb-4">Lidah buaya</h3>
+      <p class="text-xl mb-6">
+        <span class="font-bold">Nama ilmiah</span> : <em>Aloe vera</em>
+      </p>
+      <h4 class="text-2xl font-semibold mb-2">Fun Fact</h4>
+      <p class="text-base leading-relaxed mb-6">
+        Lidah buaya dikenal sebagai "tanaman keabadian" oleh bangsa Mesir kuno karena manfaatnya yang luar biasa untuk
+        kesehatan dan kecantikan. Gel-nya mengandung lebih dari 75 senyawa aktif!
+      </p>
+      <h4 class="text-2xl font-semibold mb-2">Cara Merawat</h4>
+      <ul class="text-base leading-relaxed space-y-2">
+        <li><strong>Cahaya</strong> : Suka cahaya terang tidak langsung. Letakkan di dekat jendela.</li>
+        <li><strong>Penyiraman</strong> : Siram saat tanah benar-benar kering (1–2 minggu sekali).</li>
+        <li><strong>Pemupukan</strong> : Sebulan sekali dengan pupuk ringan.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#E9EFD4] text-center px-10 py-8">
+  <div class="mb-2">
+    <a href="#" class="mx-12 font-bold">Beranda</a>
+    <a href="#" class="mx-12">Tanamanku</a>
+    <a href="#" class="mx-12">Komunitas</a>
+  </div>
+  <img src="./img/siramono_logo.png" alt="Siramono Logo" class="mx-auto h-20 my-8">
+  <p>&copy; Copyright © SIRAMONO. All Rights Reserved.</p>
+</footer>
 </body>
 
 </html>
