@@ -1,34 +1,68 @@
 <?php
-session_start();
-include './CRUD/koneksi.php';
+// Koneksi ke database
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "siramono";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $username = htmlspecialchars(trim($_POST['username']));
-  $email = htmlspecialchars(trim($_POST['email']));
-  $password = $_POST['password'];
+$conn = new mysqli($host, $user, $password, $dbname);
 
-  $check = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' OR email = '$email'");
-  if (mysqli_num_rows($check) > 0) {
-    echo "<script>
-                alert('Username atau email sudah terdaftar!');
-                window.location.href = 'register.html';
-              </script>";
-    exit;
-  }
-
-  $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-  $insert = mysqli_query($conn, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')");
-
-  if ($insert) {
-    echo "<script>
-                alert('Registrasi berhasil!');
-                window.location.href = 'login.html';
-              </script>";
-  } else {
-    echo "<script>
-                alert('Registrasi gagal. Silakan coba lagi.');
-                window.location.href = 'register.html';
-              </script>";
-  }
+// Cek koneksi
+if ($conn->connect_error) {
+  die("Koneksi gagal: " . $conn->connect_error);
 }
+
+// Ambil data dari form
+$username = trim($_POST['username']);
+$nama = trim($_POST['nama']);
+$email = trim($_POST['email']);
+$password1 = $_POST['password1'];
+$password2 = $_POST['password2'];
+$terms = isset($_POST['terms']) ? true : false;
+
+// Validasi input
+$errors = [];
+
+if (strlen($username) < 3) {
+  $errors[] = "Username minimal 3 karakter.";
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $errors[] = "Format email tidak valid.";
+}
+
+if (strlen($password1) < 6) {
+  $errors[] = "Password minimal 6 karakter.";
+}
+
+if ($password1 !== $password2) {
+  $errors[] = "Password dan konfirmasi tidak cocok.";
+}
+
+if (!$terms) {
+  $errors[] = "Anda harus menyetujui syarat & ketentuan.";
+}
+
+if (!empty($errors)) {
+  foreach ($errors as $error) {
+    echo "<p style='color:red;'>$error</p>";
+  }
+  echo "<p><a href='register.html'>Kembali</a></p>";
+  exit();
+}
+
+// Hash password
+$hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
+
+// Simpan ke database
+$stmt = $conn->prepare("INSERT INTO users (username, nama, email, password) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $username, $nama, $email, $hashedPassword);
+
+if ($stmt->execute()) {
+  echo "<p>Registrasi berhasil! <a href='login.html'>Login sekarang</a></p>";
+} else {
+  echo "<p style='color:red;'>Gagal menyimpan data: " . $stmt->error . "</p>";
+}
+
+$stmt->close();
+$conn->close();
