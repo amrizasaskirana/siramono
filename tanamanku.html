@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siramono - Beranda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&display=swap" rel="stylesheet">
+
+<body class="bg-[#f4f1e8] text-gray-800">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-large text-gray-800">
+      <a href="beranda.html">Beranda</a>
+      <a href="tanamanku.html" class="text-green-900 font-bold">Tanamanku</a>
+      <a href="komunitas.html">Komunitas</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>Jane Doe</span>
+      <img src="./img/avatar.png" class="w-10 h-10 rounded-full object-cover" />
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <div class="bg-white px-2 md:px-12">
+    <div class="flex flex-col md:flex-col justify-between overflow-hidden">
+      <!-- Tulisan dan Tombol -->
+      <div class="flex flex-row w-full bg-[#F2EED7] rounded-2xl shadow-md">
+        <div class=" z-20 pl-32 mt-20">
+          <h1 class="text-[50px] font-semibold poppins text-[#263011] leading-tight">How to connect <br>
+            your plant to Siramono?</h1>
+
+          <div class="flex flex-col items-start">
+            <!-- Garis Hijau -->
+            <div class="w-72 h-[5px] bg-[#4A5E20] mb-12 mt-12 rounded"></div>
+            <p class="text-xl text-[#000000] mb-6r"
+              style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">Tutorial
+              simpel untuk mengkoneksikan tanamanmu ke robot Siramono. Ikuti langkah dan sambungkan tanamanmu pada
+              website
+              Siramono.</p>
+            <button
+              class="bg-[#4A5E20] hover:bg-[#5b704d] text-white py-3 px-8 rounded-full shadow-lg font-semibold mt-12">
+              Let’s Get Started
+            </button>
+          </div>
+        </div>
+        <div class="rounded-2xl w-full h-[650px] bg-[url('./img/dauntanamanku.png')] bg-no-repeat bg-cover bg-right">
+        </div>
+      </div>
+
+      <!-- Section: Tanamanku -->
+      <section class="px-6 md:px-6 py-10">
+        <h2 class="text-4xl font-bold text-[#798645] mb-8">Tanamanku</h2>
+
+        <!-- List tanaman -->
+        <div class="flex flex-col gap-8">
+
+          <!-- Kartu Tanaman -->
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <!-- Kiri: Gambar dan nama -->
+            <div class="bg-[#F2EED7] p-4 rounded-xl shadow-md mb-2">
+              <img src="./img/aloe.png" alt="Lidah Buaya" class="mb-12 rounded">
+              <h3 class="text-[#5B5B5B] text-sm font-semibold mb-4" style="font-size: 24px;">Lidah Buaya</h3>
+              <p class="text-[#5B5B5B] text-xs italic" style="font-size: 16px;">Aloe vera</p>
+            </div>
+
+            <!-- Kanan: Data sensor -->
+            <div class="flex flex-col gap-4 text-sm text-[#333] w-full md:w-auto">
+              <div class="flex items-center gap-3">
+                <img src="./img/sun.png" alt="Sun" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">Intensitas Cahaya</p>
+                  <p>24.300 lux</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="./img/water.png" alt="Kelembapan" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">Kelembapan</p>
+                  <p>18%</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="./img/pupuk.png" alt="TDS" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">TDS (pupuk)</p>
+                  <p>850 ppm</p>
+                </div>
+              </div>
+              <button class="bg-[#798645] text-white py-2 px-8 rounded-full w-fit mt-2">Atur</button>
+            </div>
+          </div>
+
+          <!-- Copy dan ganti untuk tanaman kedua -->
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <!-- Gambar tanaman -->
+            <div class="bg-[#F2EED7] p-4 rounded-xl shadow-md">
+              <img src="./img/pilea.png" alt="Pilea" class="mb-2 rounded">
+              <h3 class="text-[#5B5B5B] text-sm font-semibold mb-4" style="font-size: 24px;"">Pilea</h3>
+            <p class=" text-[#5B5B5B] text-xs italic" style="font-size: 16px;">Pilea peperomioides</p>
+            </div>
+
+            <!-- Sensor data -->
+            <div class="flex flex-col gap-4 text-sm text-[#333] w-full md:w-auto">
+              <div class="flex items-center gap-3">
+                <img src="./img/sun.png" alt="Sun" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">Intensitas Cahaya</p>
+                  <p>24.300 lux</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="./img/water.png" alt="Kelembapan" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">Kelembapan</p>
+                  <p>18%</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="./img/pupuk.png" alt="TDS" class="w-12 h-12">
+                <div>
+                  <p class="font-semibold">TDS (pupuk)</p>
+                  <p>850 ppm</p>
+                </div>
+              </div>
+              <button class="bg-[#798645] text-white py-2 px-8 rounded-full w-fit mt-2">Atur</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
