@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komunitas - Siramono</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-800">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-large text-gray-800">
+      <a href="beranda.html">Beranda</a>
+      <a href=" tanamanku.html">Tanamanku</a>
+      <a href="komunitas.html" class="text-green-900 font-bold">Komunitas</a>
+    </div>
+    <div class=" flex items-center gap-4">
+      <span>Jane Doe</span>
+      <img src="./img/avatar.png" class="w-10 h-10 rounded-full object-cover" />
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="px-10 mt-2">
+    <div class="flex items-center bg-gray-100 shadow-sm px-4 py-3 rounded-full">
+      <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.75 3.75a7.5 7.5 0 0012.9 12.9z" />
+      </svg>
+      <input type="text" placeholder="Search by Keywords"
+        class="bg-[#F3F3F1] w-full text-gray-600 placeholder-gray-500 focus:outline-none" />
+    </div>
+  </div>
+
+
+  <!-- Main content -->
+  <div class="flex px-8 py-6 gap-6">
+    <!-- Sidebar -->
+    <aside class="w-1/5">
+      <div class="flex flex-col items-center mb-6">
+        <div class="w-30 h-30 rounded-full">
+          <img src="./img/imgkomunitas.png" alt="Jane Doe" />
+        </div>
+        <h2 class="mt-3 text-2xl font-bold text-[#4C6518]">Jane Doe</h2>
+        <p class="text-sm text-gray-500 text-[#4C6518]">@JaneDoe</p>
+      </div>
+      <nav class="space-y-4">
+        <button
+          class="flex items-center gap-4 w-full text-left px-8 py-2 bg-[#4A5E20] text-white rounded-full font-semibold">
+          <img src="./img/iconnewsfeed.png" alt="News Feed Icon" class="w-8 h-8" />
+          News Feed
+        </button>
+        <button
+          class="flex items-center justify-between w-full text-left px-8 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <div class="flex items-center gap-4">
+            <img src="./img/iconmessages.png" alt="Messages Icon" class="w-8 h-8" />
+            Messages
+          </div>
+          <span class="bg-black text-white rounded-full px-2">6</span>
+        </button>
+        <button
+          class="flex items-center justify-between w-full text-left px-8 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <div class="flex items-center gap-4">
+            <img src="./img/iconfriends.png" alt="Friends Icon" class="w-8 h-8" />
+            Friends
+          </div>
+          <span class="bg-black text-white rounded-full px-2">3</span>
+        </button>
+        <button class="flex items-center gap-4 w-full text-left px-8 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <img src="./img/iconmedia.png" alt="Media Icon" class="w-8 h-8" />
+          Media
+        </button>
+        <button class="flex items-center gap-4 w-full text-left px-8 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <img src="./img/iconsettings.png" alt="Settings Icon" class="w-8 h-8" />
+          Settings
+        </button>
+      </nav>
+
+    </aside>
+
+    <!-- Post feed -->
+    <main class="w-3/5 space-y-6">
+      <div class="bg-white p-4 rounded-xl shadow">
+        <textarea placeholder="Share Something..." class="w-full p-2 border rounded-lg resize-none"></textarea>
+        <div class="flex items-center justify-between mt-2">
+          <div class="flex space-x-2 text-gray-600">
+            <button class="hover:text-green-600">📁 File</button>
+            <button class="hover:text-green-600">🖼️ Image</button>
+            <button class="hover:text-green-600">📍 Location</button>
+            <button class="hover:text-green-600">🔓 Public</button>
+          </div>
+          <button class="bg-[#A5B75D] text-white px-8 py-1.5 rounded-full">Post</button>
+        </div>
+      </div>
+
+      <!-- Post 1 -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="font-bold">hello bbg <span class="text-gray-400 text-sm">5 minutes ago</span></div>
+        <p class="mt-2 text-sm text-gray-800">guys, sender baru dikasih lidah buaya sama temen sender nih, tapi bingung
+          rawatnya bcz katanya nih lidah buaya tanaman yang rewel. mw minta tips&trick rawat lidah buaya dong. oiya,
+          sekalian pamerin tanaman kalian juga ya. TIA</p>
+        <div class="flex justify-between mt-3 text-gray-500 text-sm">
+          <span>❤️ 23.5K</span><span>💬 3.5K</span><span>🔁 2.2K</span>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="font-bold">Mr. Chair <span class="text-gray-400 text-sm">7 minutes ago</span></div>
+        <p class="mt-2 text-sm text-gray-800"><em>*suatu hari di jam 10 malem*</em><br>"Mak, besok disuruh Bu Guru bawa
+          tanaman hias sama potnya sekalian"</p>
+        <img src="squidward.jpg" alt="Meme" class="mt-3 rounded-lg" />
+        <div class="flex justify-between mt-3 text-gray-500 text-sm">
+          <span>❤️ 23.5K</span><span>💬 3.5K</span><span>🔁 2.2K</span>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <div class="font-bold">THE wife :3 <span class="text-gray-400 text-sm">2 minutes ago</span></div>
+        <p class="mt-2 text-sm text-gray-800">keputusan terbaik sejauh ini adalah mulai pelihara banyak houseplants...
+        </p>
+        <div class="grid grid-cols-3 gap-2 mt-2">
+          <img src="room1.jpg" class="rounded-lg" />
+          <img src="room2.jpg" class="rounded-lg" />
+          <img src="room3.jpg" class="rounded-lg" />
+        </div>
+        <div class="flex justify-between mt-3 text-gray-500 text-sm">
+          <span>❤️ 23.5K</span><span>💬 3.5K</span><span>🔁 2.2K</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Stories and Suggestions -->
+    <aside class="w-1/5 space-y-6">
+      <div>
+        <h3 class="font-semibold mb-2">Stories</h3>
+        <div class="flex space-x-2">
+          <img src="story1.jpg" class="w-16 h-16 rounded-lg" />
+          <img src="story2.jpg" class="w-16 h-16 rounded-lg" />
+          <img src="story3.jpg" class="w-16 h-16 rounded-lg" />
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Suggestions</h3>
+        <div class="space-y-2 text-sm">
+          <p>🌱 Pro Weebs</p>
+          <p>🌿 Fahri Putra</p>
+          <p>🌼 hello bbg</p>
+          <a href="#" class="text-green-600 font-medium text-sm">Selengkapnya</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+
+</html>

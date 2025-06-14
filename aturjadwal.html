@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siramono - Atur Jadwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&display=swap" rel="stylesheet" />
+</head>
+
+
+<body class="text-gray-800 bg-white">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-medium text-gray-800">
+      <a href="beranda.html">Beranda</a>
+      <a href="tanamanku.html" class="text-green-900 font-bold">Tanamanku</a>
+      <a href="komunitas.html">Komunitas</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>Jane Doe</span>
+      <img src="./img/avatar.png" class="w-10 h-10 rounded-full object-cover" />
+    </div>
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="relative px-6 md:px-20 py-8">
+    <!-- Tombol Bantuan -->
+    <div class="absolute right-10 top-10">
+      <button class="bg-[#4A5E20] text-white px-10 py-2 rounded-full">Bantuan</button>
+    </div>
+
+    <!-- Header -->
+    <h1 class="text-4xl font-bold text-[#798645] mb-2">Atur Jadwal</h1>
+    <p class="text-base mb-8 font-semibold italic">Atur jadwal penyiraman tanaman anda disini, rawat dengan bijak!</p>
+
+    <!-- Kartu Tanaman -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <!-- Kiri: Gambar dan nama -->
+      <div class="bg-[#F2EED7] p-4 rounded-xl shadow-md mb-2">
+        <img src="./img/aloe.png" alt="Lidah Buaya" class="mb-12 rounded">
+        <h3 class="text-[#5B5B5B] font-semibold mb-4 text-2xl">Lidah Buaya</h3>
+        <p class="text-[#5B5B5B] text-sm italic">Aloe vera</p>
+      </div>
+
+
+      <!-- Formulir Jadwal -->
+      <div class="flex-1 space-y-6">
+        <!-- Set Time -->
+        <div>
+          <label class="block text-2xl font-bold mb-2">Set Time</label>
+          <div class="flex items-center bg-gray-100 px-4 py-3 rounded-full">
+            <input type="calender" class="bg-transparent w-full focus:outline-none" />
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Kelembapan -->
+        <div>
+          <label class="block text-2xl font-bold mb-2">Batas Minimal Kelembapan</label>
+          <input type="number" placeholder="Batas Kelembapan..."
+            class="w-full px-4 py-3 rounded-full bg-gray-100 focus:outline-none" />
+        </div>
+
+        <!-- Switch Otomatis -->
+        <div class="flex items-center justify-between">
+          <label class="text-lg font-semibold">Penyiraman Otomatis</label>
+          <label class="inline-flex relative items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer" />
+            <div
+              class="w-11 h-6 bg-red-300 rounded-full peer peer-checked:bg-green-400 peer-focus:outline-none peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:h-5 after:w-5 after:rounded-full after:transition-all">
+            </div>
+          </label>
+        </div>
+
+        <!-- Tombol Simpan -->
+        <button class="bg-[#4A5E20] text-white py-2 px-16 rounded-full">Simpan</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

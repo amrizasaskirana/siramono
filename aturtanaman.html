@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siramono - Atur Tanaman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&display=swap" rel="stylesheet" />
+</head>
+
+<body class="text-gray-800">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-large text-gray-800">
+      <a href="beranda.html">Beranda</a>
+      <a href="tanamanku.html" class="text-green-900 font-bold">Tanamanku</a>
+      <a href="komunitas.html">Komunitas</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>Jane Doe</span>
+      <img src="./img/avatar.png" class="w-10 h-10 rounded-full object-cover" />
+    </div>
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="px-6 md:px-20 py-2">
+    <h1 class="text-4xl font-bold text-[#798645] mb-2">Control Panel</h1>
+    <p class="text-[16px] mb-8 font-semibold italic">Atur tanaman anda disini, rawat dengan bijak!</p>
+
+    <!-- Kartu Tanaman -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <!-- Kiri: Gambar dan nama -->
+      <div class="bg-[#F2EED7] p-4 rounded-xl shadow-md mb-2">
+        <img src="./img/aloe.png" alt="Lidah Buaya" class="mb-12 rounded">
+        <h3 class="text-[#5B5B5B] font-semibold mb-4 text-2xl">Lidah Buaya</h3>
+        <p class="text-[#5B5B5B] text-sm italic">Aloe vera</p>
+      </div>
+
+      <!-- Kanan: Kontrol dan Informasi -->
+      <div class="flex-1 relative">
+        <!-- Tombol Bantuan -->
+        <div class="absolute right-0 -top-24">
+          <button class="bg-[#4A5E20] text-white px-10 py-2 rounded-full">Bantuan</button>
+        </div>
+
+        <div class="mb-8 pt-2">
+          <h3 class="text-3xl font-bold mb-1">Status</h3>
+
+          <!-- Switch + Label -->
+          <div class="flex items-center justify-between mb-2">
+            <p class="text-[20px] font-semibold">Automatic Watering Bot</p>
+            <div class="flex items-center gap-2">
+              <span id="statusLabel" class="text-sm italic text-gray-700">Offline</span>
+              <label class="inline-flex relative items-center cursor-pointer">
+                <input type="checkbox" id="statusToggle" class="sr-only peer">
+                <div
+                  class="w-11 h-6 bg-red-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-400">
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <p class="text-sm italic text-gray-500 mb-4">
+            Robot otomatis yang membantu menyiram tanaman anda secara real-time dan mudah untuk dijadwalkan. Anda bisa
+            langsung menyiram tanaman anda tanpa fitur ini.
+          </p>
+
+          <!-- Tombol -->
+          <div class="flex gap-4">
+            <button class="bg-[#4A5E20] text-white py-2 px-16 rounded-full">Siram Manual</button>
+            <a href="aturjadwal.html">
+              <button class="bg-[#4A5E20] text-white py-2 px-16 rounded-full">Atur Jadwal</button>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Informasi Sensor -->
+        <div>
+          <h3 class="text-3xl font-bold mb-2">Informasi</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <img src="./img/sun.png" class="w-10 h-10">
+              <div>
+                <p class="font-semibold">Intensitas Cahaya</p>
+                <p>10.000–25.000 lux</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="./img/water.png" class="w-10 h-10">
+              <div>
+                <p class="font-semibold">Kelembapan</p>
+                <p>30–50%</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="./img/pupuk.png" class="w-10 h-10">
+              <div>
+                <p class="font-semibold">TDS (pupuk)</p>
+                <p>800–1000 ppm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script: Toggle Switch -->
+  <script>
+    const toggle = document.getElementById("statusToggle");
+    const label = document.getElementById("statusLabel");
+
+    toggle.addEventListener("change", () => {
+      label.textContent = toggle.checked ? "Online" : "Offline";
+    });
+  </script>
+
+</body>
+
+</html>
