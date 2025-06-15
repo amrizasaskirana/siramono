@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siramono - Komunitas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-10 py-6 bg-white">
+    <img src="./img/siramono_logo.png" alt="Logo Siramono" class="h-16" />
+    <div class="flex gap-12 font-medium text-gray-800">
+      <a href="beranda.html">Beranda</a>
+      <a href="tanamanku.html">Tanamanku</a>
+      <a href="komunitas.html" class="text-green-900 font-bold">Komunitas</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>Jane Doe</span>
+      <a href="profile.html">
+        <img src="./img/avatar.png" class="w-13 h-10 rounded-full object-cover" alt="Jane Doe Profile" />
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-12 gap-6 px-8 py-6">
+
+    <!-- Sidebar Kiri -->
+    <aside class="col-span-3">
+      <div class="flex flex-col items-center mb-6">
+        <img src="./img/imgkomunitas.png" alt="Jane Doe" class="w-42 h-32 rounded-full object-cover" />
+        <h2 class="mt-3 text-xl font-bold text-[#4C6518]">Jane Doe</h2>
+        <p class="text-sm text-[#4C6518]">@JaneDoe</p>
+      </div>
+      <nav class="space-y-4">
+        <a href="komunitas.html"
+          class="flex items-center gap-4 w-full px-6 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <img src="./img/iconnewsfeed.png" alt="NewsFeed Icon" class="w-6 h-6" />News Feed
+        </a>
+        <a href="messages.html"
+          class="flex items-center justify-between w-full px-6 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <div class="flex items-center gap-4">
+            <img src="./img/iconmessages.png" alt="Messages Icon" class="w-6 h-6" />
+            Messages
+          </div>
+          <span class="bg-black text-white rounded-full w-6 h-6 text-md text-center leading-6">6</span>
+        </a>
+        <a href="friends.html"
+          class="flex items-center justify-between w-full px-6 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <div class="flex items-center gap-4">
+            <img src="./img/iconfriends.png" alt="Friends Icon" class="w-6 h-6" />
+            Friends
+          </div>
+          <span class="bg-black text-white rounded-full w-6 h-6 text-md text-center leading-6">3</span>
+        </a>
+        <a href="media.html"
+          class="flex items-center gap-4 text-left px-4 py-2 bg-[#4A5E20] text-white rounded-lg font-semibold w-[340px]">
+          <img src="./img/iconmedia.png" alt="Media Icon" class="w-6 h-6" />
+          Media
+        </a>
+        <button class="flex items-center gap-4 w-full px-6 py-2 text-gray-700 hover:bg-gray-200 rounded-full">
+          <img src="./img/iconsettings.png" alt="Settings Icon" class="w-6 h-6" />
+          Settings
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Feed Utama -->
+    <main class="col-span-6 space-y-6">
+
+      <!-- Post feed -->
+      <main class="flex-1 space-y-2">
+        <!-- Judul Post -->
+        <h2 class="text-3xl text-[#798645] font-bold">Media</h2>
+
+
+</body>
+
+</html>
